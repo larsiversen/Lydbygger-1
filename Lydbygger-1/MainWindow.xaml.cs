@@ -64,6 +64,8 @@ namespace Lydbygger_1
     private void Canvas_Drop(object sender, DragEventArgs e)
     {
       _viewModel.TextVisibility = Visibility.Collapsed;
+            if (((Canvas)sender).Children.Count >= 4)
+                return;
 
       foreach (var format in e.Data.GetFormats())
       {
