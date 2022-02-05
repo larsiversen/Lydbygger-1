@@ -10,6 +10,8 @@ namespace Lydbygger_1
     {
         static App()
         {
+
+
             DispatcherHelper.Initialize();
         }
     }
