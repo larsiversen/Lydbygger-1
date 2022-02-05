@@ -1,0 +1,316 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<Wix xmlns="http://wixtoolset.org/schemas/v4/wxs">
+
+    <Product Id="211136DC-CEC3-42CD-AAAA-6695B6A36345" Name="Lydbyggeren for PC" Language="1033" Version="1.0.0.0" Manufacturer="Dyspraksiforeningen" UpgradeCode="586E12D6-5DE5-43C0-969E-160AE1B9D06E">
+      
+        
+      
+        <Package Description="Lydbggeren for PC, basis" Comments="Basis" InstallerVersion="200" Compressed="yes" />
+      
+        <Media Id="1" Cabinet="simple.cab" EmbedCab="yes" />
+        <Directory Id="TARGETDIR" Name="SourceDir">
+            <Directory Id="ProgramFilesFolder" Name="PFiles">
+                <Directory Id="IMAGES" Name="Images">
+                    <Component Id="AA.JPG" DiskId="1" Guid="9F5C83F5-0648-47DD-AD06-7A6C2B4FE0F8">
+                        <File Id="AA.JPG" Name="aa.jpg" Source="C:\Users\Lars\Documents\Visual Studio 2013\Projects\Lydbygger-1\Lydbygger-1\bin\Release\Images\aa.jpg" />
+                    </Component>
+                    <Component Id="AARE.JPG" DiskId="1" Guid="E81E714C-5763-4110-97DD-994894A5F00B">
+                        <File Id="AARE.JPG" Name="aare.jpg" Source="C:\Users\Lars\Documents\Visual Studio 2013\Projects\Lydbygger-1\Lydbygger-1\bin\Release\Images\aare.jpg" />
+                    </Component>
+                    <Component Id="AE.JPG" DiskId="1" Guid="EB016734-E7AE-4A23-9BFD-336F7903D72B">
+                        <File Id="AE.JPG" Name="ae.jpg" Source="C:\Users\Lars\Documents\Visual Studio 2013\Projects\Lydbygger-1\Lydbygger-1\bin\Release\Images\ae.jpg" />
+                    </Component>
+                    <Component Id="AND.JPG" DiskId="1" Guid="C71EE97C-21CE-4FCA-9838-09230170725D">
+                        <File Id="AND.JPG" Name="and.jpg" Source="C:\Users\Lars\Documents\Visual Studio 2013\Projects\Lydbygger-1\Lydbygger-1\bin\Release\Images\and.jpg" />
+                    </Component>
+                    <Component Id="AR.JPG" DiskId="1" Guid="A782F42D-B284-466B-BABC-71659EDBB03C">
+                        <File Id="AR.JPG" Name="ar.jpg" Source="C:\Users\Lars\Documents\Visual Studio 2013\Projects\Lydbygger-1\Lydbygger-1\bin\Release\Images\ar.jpg" />
+                    </Component>
+                    <Component Id="B.JPG" DiskId="1" Guid="80C93FAB-8E38-4A11-97AE-0AC6ADD89A06">
+                        <File Id="B.JPG" Name="b.jpg" Source="C:\Users\Lars\Documents\Visual Studio 2013\Projects\Lydbygger-1\Lydbygger-1\bin\Release\Images\b.jpg" />
+                    </Component>
+                    <Component Id="DROEM.JPG" DiskId="1" Guid="D7EC1AC5-DD9A-4F33-A1CC-FBF87272E207">
+                        <File Id="DROEM.JPG" Name="droem.jpg" Source="C:\Users\Lars\Documents\Visual Studio 2013\Projects\Lydbygger-1\Lydbygger-1\bin\Release\Images\droem.jpg" />
+                    </Component>
+                    <Component Id="DRYP.JPG" DiskId="1" Guid="2932FBDE-8BB5-4E46-BDEF-082A6DB7DCEA">
+                        <File Id="DRYP.JPG" Name="dryp.jpg" Source="C:\Users\Lars\Documents\Visual Studio 2013\Projects\Lydbygger-1\Lydbygger-1\bin\Release\Images\dryp.jpg" />
+                    </Component>
+                    <Component Id="E.JPG" DiskId="1" Guid="8649FF59-9A2C-40C1-9980-3982AD6439C0">
+                        <File Id="E.JPG" Name="e.jpg" Source="C:\Users\Lars\Documents\Visual Studio 2013\Projects\Lydbygger-1\Lydbygger-1\bin\Release\Images\e.jpg" />
+                    </Component>
+                    <Component Id="F.JPG" DiskId="1" Guid="243598F2-4C2E-46F7-9872-370A6A8C93AB">
+                        <File Id="F.JPG" Name="f.jpg" Source="C:\Users\Lars\Documents\Visual Studio 2013\Projects\Lydbygger-1\Lydbygger-1\bin\Release\Images\f.jpg" />
+                    </Component>
+                    <Component Id="G.JPG" DiskId="1" Guid="E26A79E4-CAB7-4E47-BE3A-7091479C9F1D">
+                        <File Id="G.JPG" Name="g.jpg" Source="C:\Users\Lars\Documents\Visual Studio 2013\Projects\Lydbygger-1\Lydbygger-1\bin\Release\Images\g.jpg" />
+                    </Component>
+                    <Component Id="H.JPG" DiskId="1" Guid="4A821126-FB03-465D-ABA7-26021A90B624">
+                        <File Id="H.JPG" Name="h.jpg" Source="C:\Users\Lars\Documents\Visual Studio 2013\Projects\Lydbygger-1\Lydbygger-1\bin\Release\Images\h.jpg" />
+                    </Component>
+                    <Component Id="I.JPG" DiskId="1" Guid="9CD02C29-BB72-4664-8678-771D15DEBC82">
+                        <File Id="I.JPG" Name="i.jpg" Source="C:\Users\Lars\Documents\Visual Studio 2013\Projects\Lydbygger-1\Lydbygger-1\bin\Release\Images\i.jpg" />
+                    </Component>
+                    <Component Id="J.JPG" DiskId="1" Guid="DD9ACB66-667D-4D2F-8C7E-A56D1E27F52B">
+                        <File Id="J.JPG" Name="j.jpg" Source="C:\Users\Lars\Documents\Visual Studio 2013\Projects\Lydbygger-1\Lydbygger-1\bin\Release\Images\j.jpg" />
+                    </Component>
+                    <Component Id="K.JPG" DiskId="1" Guid="E3EA3B44-BB9D-4C76-A260-705D37E9F98A">
+                        <File Id="K.JPG" Name="k.jpg" Source="C:\Users\Lars\Documents\Visual Studio 2013\Projects\Lydbygger-1\Lydbygger-1\bin\Release\Images\k.jpg" />
+                    </Component>
+                    <Component Id="L.JPG" DiskId="1" Guid="E4C50EEC-4CF2-40EB-9B07-B59FAD7E26B8">
+                        <File Id="L.JPG" Name="l.jpg" Source="C:\Users\Lars\Documents\Visual Studio 2013\Projects\Lydbygger-1\Lydbygger-1\bin\Release\Images\l.jpg" />
+                    </Component>
+                    <Component Id="M.JPG" DiskId="1" Guid="36420B60-EBB3-4842-9090-A878243E7BF9">
+                        <File Id="M.JPG" Name="m.jpg" Source="C:\Users\Lars\Documents\Visual Studio 2013\Projects\Lydbygger-1\Lydbygger-1\bin\Release\Images\m.jpg" />
+                    </Component>
+                    <Component Id="N.JPG" DiskId="1" Guid="620A1F09-4013-4CA6-83F6-0D61ED636F3C">
+                        <File Id="N.JPG" Name="n.jpg" Source="C:\Users\Lars\Documents\Visual Studio 2013\Projects\Lydbygger-1\Lydbygger-1\bin\Release\Images\n.jpg" />
+                    </Component>
+                    <Component Id="NG.JPG" DiskId="1" Guid="F2D0AE28-0D76-4806-A89C-4001D6DC3D7E">
+                        <File Id="NG.JPG" Name="ng.jpg" Source="C:\Users\Lars\Documents\Visual Studio 2013\Projects\Lydbygger-1\Lydbygger-1\bin\Release\Images\ng.jpg" />
+                    </Component>
+                    <Component Id="O.JPG" DiskId="1" Guid="596929B3-2D32-4639-8B6C-4426D3FD5F8A">
+                        <File Id="O.JPG" Name="o.jpg" Source="C:\Users\Lars\Documents\Visual Studio 2013\Projects\Lydbygger-1\Lydbygger-1\bin\Release\Images\o.jpg" />
+                    </Component>
+                    <Component Id="P.JPG" DiskId="1" Guid="5AC82C77-8019-4EE6-8446-E6D83DCFE7D0">
+                        <File Id="P.JPG" Name="p.jpg" Source="C:\Users\Lars\Documents\Visual Studio 2013\Projects\Lydbygger-1\Lydbygger-1\bin\Release\Images\p.jpg" />
+                    </Component>
+                    <Component Id="R.JPG" DiskId="1" Guid="D180BA42-DA46-496C-ADDC-B01392797211">
+                        <File Id="R.JPG" Name="r.jpg" Source="C:\Users\Lars\Documents\Visual Studio 2013\Projects\Lydbygger-1\Lydbygger-1\bin\Release\Images\r.jpg" />
+                    </Component>
+                    <Component Id="S.JPG" DiskId="1" Guid="06451204-F97D-4AAC-9E68-9756E1C7E9B6">
+                        <File Id="S.JPG" Name="s.jpg" Source="C:\Users\Lars\Documents\Visual Studio 2013\Projects\Lydbygger-1\Lydbygger-1\bin\Release\Images\s.jpg" />
+                    </Component>
+                    <Component Id="SJ.JPG" DiskId="1" Guid="3E42E706-3248-4D31-899C-DCC9B93CCE6A">
+                        <File Id="SJ.JPG" Name="sj.jpg" Source="C:\Users\Lars\Documents\Visual Studio 2013\Projects\Lydbygger-1\Lydbygger-1\bin\Release\Images\sj.jpg" />
+                    </Component>
+                    <Component Id="T.JPG" DiskId="1" Guid="9414C9C3-BB53-4DDE-8DD0-11ACCD5C525E">
+                        <File Id="T.JPG" Name="t.jpg" Source="C:\Users\Lars\Documents\Visual Studio 2013\Projects\Lydbygger-1\Lydbygger-1\bin\Release\Images\t.jpg" />
+                    </Component>
+                   
+                    <Component Id="U.JPG" DiskId="1" Guid="D3BEFE8B-E6C8-447A-BF4F-88A1786FDE37">
+                        <File Id="U.JPG" Name="u.jpg" Source="C:\Users\Lars\Documents\Visual Studio 2013\Projects\Lydbygger-1\Lydbygger-1\bin\Release\Images\u.jpg" />
+                    </Component>
+                    <Component Id="V.JPG" DiskId="1" Guid="F0E74339-BD3D-4CDC-88AE-E5A61EC20430">
+                        <File Id="V.JPG" Name="v.jpg" Source="C:\Users\Lars\Documents\Visual Studio 2013\Projects\Lydbygger-1\Lydbygger-1\bin\Release\Images\v.jpg" />
+                    </Component>
+                    <Component Id="Y.JPG" DiskId="1" Guid="620E879C-C17C-48E7-AF0A-77156837C6F7">
+                        <File Id="Y.JPG" Name="y.jpg" Source="C:\Users\Lars\Documents\Visual Studio 2013\Projects\Lydbygger-1\Lydbygger-1\bin\Release\Images\y.jpg" />
+                    </Component>
+                    <Component Id="ZAEBLE.JPG" DiskId="1" Guid="599FEB94-0C0D-4159-87B6-4E685459347D">
+                        <File Id="ZAEBLE.JPG" Name="zaeble.jpg" Source="C:\Users\Lars\Documents\Visual Studio 2013\Projects\Lydbygger-1\Lydbygger-1\bin\Release\Images\zaeble.jpg" />
+                    </Component>
+                    <Component Id="ZZOE.JPG" DiskId="1" Guid="73AF8561-EA62-45CD-8AB5-57BB30E06D0C">
+                        <File Id="ZZOE.JPG" Name="zzoe.jpg" Source="C:\Users\Lars\Documents\Visual Studio 2013\Projects\Lydbygger-1\Lydbygger-1\bin\Release\Images\zzoe.jpg" />
+                    </Component>
+                    <Component Id="ZZOEH.JPG" DiskId="1" Guid="71F0CC7E-F80B-4F27-935C-7F9F2E32A4EC">
+                        <File Id="ZZOEH.JPG" Name="zzoeh.jpg" Source="C:\Users\Lars\Documents\Visual Studio 2013\Projects\Lydbygger-1\Lydbygger-1\bin\Release\Images\zzoeh.jpg" />
+                    </Component>
+                    <Component Id="ZZOERN.JPG" DiskId="1" Guid="7017DE7E-CC91-4871-A10C-8E17BE542E02">
+                        <File Id="ZZOERN.JPG" Name="zzoern.jpg" Source="C:\Users\Lars\Documents\Visual Studio 2013\Projects\Lydbygger-1\Lydbygger-1\bin\Release\Images\zzoern.jpg" />
+                    </Component>
+                </Directory>
+                <Directory Id="SOUNDS" Name="Sounds">
+                    <Component Id="AA.MP3" DiskId="1" Guid="794EFABF-15AB-4180-8EFF-EC71FA556894">
+                        <File Id="AA.MP3" Name="aa.mp3" Source="C:\Users\Lars\Documents\Visual Studio 2013\Projects\Lydbygger-1\Lydbygger-1\bin\Release\Sounds\aa.mp3" />
+                    </Component>
+                    <Component Id="AARE.MP3" DiskId="1" Guid="BD50DDF8-9C45-4FBB-B737-EBCF4A1B4EF1">
+                        <File Id="AARE.MP3" Name="aare.mp3" Source="C:\Users\Lars\Documents\Visual Studio 2013\Projects\Lydbygger-1\Lydbygger-1\bin\Release\Sounds\aare.mp3" />
+                    </Component>
+                    <Component Id="AE.MP3" DiskId="1" Guid="227BE574-EDF4-468C-BEBC-E6DFAC7C8F0F">
+                        <File Id="AE.MP3" Name="ae.mp3" Source="C:\Users\Lars\Documents\Visual Studio 2013\Projects\Lydbygger-1\Lydbygger-1\bin\Release\Sounds\ae.mp3" />
+                    </Component>
+                    <Component Id="AND.MP3" DiskId="1" Guid="816490D5-A4CF-41FA-B030-2517557F14BC">
+                        <File Id="AND.MP3" Name="and.mp3" Source="C:\Users\Lars\Documents\Visual Studio 2013\Projects\Lydbygger-1\Lydbygger-1\bin\Release\Sounds\and.mp3" />
+                    </Component>
+                    <Component Id="AR.MP3" DiskId="1" Guid="B8B743C7-BB4D-45CE-8043-BFFFC83494B6">
+                        <File Id="AR.MP3" Name="ar.mp3" Source="C:\Users\Lars\Documents\Visual Studio 2013\Projects\Lydbygger-1\Lydbygger-1\bin\Release\Sounds\ar.mp3" />
+                    </Component>
+                    <Component Id="B.MP3" DiskId="1" Guid="BD341114-A5DB-49FD-A3FF-255661B54A2D">
+                        <File Id="B.MP3" Name="b.mp3" Source="C:\Users\Lars\Documents\Visual Studio 2013\Projects\Lydbygger-1\Lydbygger-1\bin\Release\Sounds\b.mp3" />
+                    </Component>
+                    <Component Id="BLOEDT.MP3" DiskId="1" Guid="8C42498D-8A93-4739-8081-4A8949192BEB">
+                        <File Id="BLOEDT.MP3" Name="bloedt.mp3" Source="C:\Users\Lars\Documents\Visual Studio 2013\Projects\Lydbygger-1\Lydbygger-1\bin\Release\Sounds\bloedt.mp3" />
+                    </Component>
+                    <Component Id="DROEM.MP3" DiskId="1" Guid="7A234EBF-274B-4936-895D-27AD52B0F098">
+                        <File Id="DROEM.MP3" Name="droem.mp3" Source="C:\Users\Lars\Documents\Visual Studio 2013\Projects\Lydbygger-1\Lydbygger-1\bin\Release\Sounds\droem.mp3" />
+                    </Component>
+                    <Component Id="DRYP.MP3" DiskId="1" Guid="CB5B6710-702E-4011-9FF4-A447E83E84DF">
+                        <File Id="DRYP.MP3" Name="dryp.mp3" Source="C:\Users\Lars\Documents\Visual Studio 2013\Projects\Lydbygger-1\Lydbygger-1\bin\Release\Sounds\dryp.mp3" />
+                    </Component>
+                    <Component Id="E.MP3" DiskId="1" Guid="8EEAB1D4-F41F-4506-A2B3-293EE32C6223">
+                        <File Id="E.MP3" Name="e.mp3" Source="C:\Users\Lars\Documents\Visual Studio 2013\Projects\Lydbygger-1\Lydbygger-1\bin\Release\Sounds\e.mp3" />
+                    </Component>
+                    <Component Id="EMTY.MP3" DiskId="1" Guid="A99BF931-CBEF-4401-91B1-2EA881C414A5">
+                        <File Id="EMTY.MP3" Name="emty.mp3" Source="C:\Users\Lars\Documents\Visual Studio 2013\Projects\Lydbygger-1\Lydbygger-1\bin\Release\Sounds\emty.mp3" />
+                    </Component>
+                    <Component Id="F.MP3" DiskId="1" Guid="FCD40ACF-EA4C-4927-AAA1-6712824CF4F4">
+                        <File Id="F.MP3" Name="f.mp3" Source="C:\Users\Lars\Documents\Visual Studio 2013\Projects\Lydbygger-1\Lydbygger-1\bin\Release\Sounds\f.mp3" />
+                    </Component>
+                    <Component Id="G.MP3" DiskId="1" Guid="CB9BDF42-5FA9-46E7-895F-7286CAB82C9B">
+                        <File Id="G.MP3" Name="g.mp3" Source="C:\Users\Lars\Documents\Visual Studio 2013\Projects\Lydbygger-1\Lydbygger-1\bin\Release\Sounds\g.mp3" />
+                    </Component>
+                    <Component Id="H.MP3" DiskId="1" Guid="E0A8C6F4-AA11-4E53-AA1D-65DC4F026EE1">
+                        <File Id="H.MP3" Name="h.mp3" Source="C:\Users\Lars\Documents\Visual Studio 2013\Projects\Lydbygger-1\Lydbygger-1\bin\Release\Sounds\h.mp3" />
+                    </Component>
+                    <Component Id="I.MP3" DiskId="1" Guid="3BDC1DC2-104D-4439-91D2-A243A491191F">
+                        <File Id="I.MP3" Name="i.mp3" Source="C:\Users\Lars\Documents\Visual Studio 2013\Projects\Lydbygger-1\Lydbygger-1\bin\Release\Sounds\i.mp3" />
+                    </Component>
+                    <Component Id="J.MP3" DiskId="1" Guid="DE49FA4D-0406-43AA-B6F2-F1663F72B210">
+                        <File Id="J.MP3" Name="j.mp3" Source="C:\Users\Lars\Documents\Visual Studio 2013\Projects\Lydbygger-1\Lydbygger-1\bin\Release\Sounds\j.mp3" />
+                    </Component>
+                    <Component Id="K.MP3" DiskId="1" Guid="2CA3FD27-B2D9-44E6-B9F4-AAC73124A92B">
+                        <File Id="K.MP3" Name="k.mp3" Source="C:\Users\Lars\Documents\Visual Studio 2013\Projects\Lydbygger-1\Lydbygger-1\bin\Release\Sounds\k.mp3" />
+                    </Component>
+                    <Component Id="L.MP3" DiskId="1" Guid="9B3A5CD5-2C68-40B0-A8D0-B5665F353F02">
+                        <File Id="L.MP3" Name="l.mp3" Source="C:\Users\Lars\Documents\Visual Studio 2013\Projects\Lydbygger-1\Lydbygger-1\bin\Release\Sounds\l.mp3" />
+                    </Component>
+                    <Component Id="M.MP3" DiskId="1" Guid="E205CDA7-A967-418C-A4B0-F9C81C714556">
+                        <File Id="M.MP3" Name="m.mp3" Source="C:\Users\Lars\Documents\Visual Studio 2013\Projects\Lydbygger-1\Lydbygger-1\bin\Release\Sounds\m.mp3" />
+                    </Component>
+                    <Component Id="N.MP3" DiskId="1" Guid="0455E7DC-4CD1-4E18-AA21-9D4FA7685FBF">
+                        <File Id="N.MP3" Name="n.mp3" Source="C:\Users\Lars\Documents\Visual Studio 2013\Projects\Lydbygger-1\Lydbygger-1\bin\Release\Sounds\n.mp3" />
+                    </Component>
+                    <Component Id="NG.MP3" DiskId="1" Guid="F4309026-F576-46C6-AB2E-5505E002ABD8">
+                        <File Id="NG.MP3" Name="ng.mp3" Source="C:\Users\Lars\Documents\Visual Studio 2013\Projects\Lydbygger-1\Lydbygger-1\bin\Release\Sounds\ng.mp3" />
+                    </Component>
+                    <Component Id="O.MP3" DiskId="1" Guid="AD54253D-EC47-400A-A41B-CB67AC92CE16">
+                        <File Id="O.MP3" Name="o.mp3" Source="C:\Users\Lars\Documents\Visual Studio 2013\Projects\Lydbygger-1\Lydbygger-1\bin\Release\Sounds\o.mp3" />
+                    </Component>
+                    <Component Id="P.MP3" DiskId="1" Guid="971A15C2-58E8-42B2-8241-50483992D99E">
+                        <File Id="P.MP3" Name="p.mp3" Source="C:\Users\Lars\Documents\Visual Studio 2013\Projects\Lydbygger-1\Lydbygger-1\bin\Release\Sounds\p.mp3" />
+                    </Component>
+                    <Component Id="R.MP3" DiskId="1" Guid="E6D6CB96-5532-4784-AB52-355B66E6B6BB">
+                        <File Id="R.MP3" Name="r.mp3" Source="C:\Users\Lars\Documents\Visual Studio 2013\Projects\Lydbygger-1\Lydbygger-1\bin\Release\Sounds\r.mp3" />
+                    </Component>
+                    <Component Id="S.MP3" DiskId="1" Guid="4C436F3F-DC5E-4FEB-B091-251B77896638">
+                        <File Id="S.MP3" Name="s.mp3" Source="C:\Users\Lars\Documents\Visual Studio 2013\Projects\Lydbygger-1\Lydbygger-1\bin\Release\Sounds\s.mp3" />
+                    </Component>
+                    <Component Id="SJ.MP3" DiskId="1" Guid="8291A0F2-FADC-4A11-B5C3-6D2805E8411D">
+                        <File Id="SJ.MP3" Name="sj.mp3" Source="C:\Users\Lars\Documents\Visual Studio 2013\Projects\Lydbygger-1\Lydbygger-1\bin\Release\Sounds\sj.mp3" />
+                    </Component>
+                    <Component Id="T.MP3" DiskId="1" Guid="C51C922A-FF7E-4091-AEA6-61C0B5765DC2">
+                        <File Id="T.MP3" Name="t.mp3" Source="C:\Users\Lars\Documents\Visual Studio 2013\Projects\Lydbygger-1\Lydbygger-1\bin\Release\Sounds\t.mp3" />
+                    </Component>
+                    <Component Id="U.MP3" DiskId="1" Guid="0ADD9723-1018-457B-9F91-A6EB65E3723F">
+                        <File Id="U.MP3" Name="u.mp3" Source="C:\Users\Lars\Documents\Visual Studio 2013\Projects\Lydbygger-1\Lydbygger-1\bin\Release\Sounds\u.mp3" />
+                    </Component>
+                    <Component Id="V.MP3" DiskId="1" Guid="7D799904-E669-4567-BAE9-C2DDD707431D">
+                        <File Id="V.MP3" Name="v.mp3" Source="C:\Users\Lars\Documents\Visual Studio 2013\Projects\Lydbygger-1\Lydbygger-1\bin\Release\Sounds\v.mp3" />
+                    </Component>
+                    <Component Id="Y.MP3" DiskId="1" Guid="F041C102-63EC-4144-A9FB-1985B2CAF8A9">
+                        <File Id="Y.MP3" Name="y.mp3" Source="C:\Users\Lars\Documents\Visual Studio 2013\Projects\Lydbygger-1\Lydbygger-1\bin\Release\Sounds\y.mp3" />
+                    </Component>
+                    <Component Id="ZAEBLE.MP3" DiskId="1" Guid="CE79802D-913E-47EB-AAA2-F3CA8D3C5985">
+                        <File Id="ZAEBLE.MP3" Name="zaeble.mp3" Source="C:\Users\Lars\Documents\Visual Studio 2013\Projects\Lydbygger-1\Lydbygger-1\bin\Release\Sounds\zaeble.mp3" />
+                    </Component>
+                    <Component Id="ZZOE.MP3" DiskId="1" Guid="8D7CEDB0-03CC-4911-ACB4-CC63432BA9EC">
+                        <File Id="ZZOE.MP3" Name="zzoe.mp3" Source="C:\Users\Lars\Documents\Visual Studio 2013\Projects\Lydbygger-1\Lydbygger-1\bin\Release\Sounds\zzoe.mp3" />
+                    </Component>
+                    <Component Id="ZZOEH.MP3" DiskId="1" Guid="567783CD-21E1-426F-9715-D91E07406A1A">
+                        <File Id="ZZOEH.MP3" Name="zzoeh.mp3" Source="C:\Users\Lars\Documents\Visual Studio 2013\Projects\Lydbygger-1\Lydbygger-1\bin\Release\Sounds\zzoeh.mp3" />
+                    </Component>
+                    <Component Id="ZZOERN.MP3" DiskId="1" Guid="E9C413AC-DE31-4DFB-922D-F2AA8C7C7BDE">
+                        <File Id="ZZOERN.MP3" Name="zzoern.mp3" Source="C:\Users\Lars\Documents\Visual Studio 2013\Projects\Lydbygger-1\Lydbygger-1\bin\Release\Sounds\zzoern.mp3" />
+                    </Component>
+                </Directory>
+            </Directory>
+            <Component Id="LydbyggerenForPC" DiskId="1" KeyPath="yes" Guid="adc41df9-f3b8-4668-93b2-27cf05a75b71">
+                <File Id="LYDBYGGEREN_FOR_PC.EXE" Name="Lydbyggeren-for-PC.exe" Source="C:\Users\Lars\Documents\Visual Studio 2013\Projects\Lydbygger-1\Lydbygger-1\bin\Release\Lydbyggeren_for_PC.exe">
+                    <!--<Shortcut Id="desktopShortcut" Directory="DesktopFolder" Name="Lydbyggeren_for_PC" WorkingDirectory="INSTALLDIR" Advertise="yes" Icon="Lydbyggeren_for_PC.exe" IconIndex="0"/>-->
+                    <!--<Shortcut Id="ExeShortcut" Directory="ProgramMenuDir" Name="Lydbyggeren_for_PC" Advertise="yes" Icon="Lydbyggeren_for_PC.exe" IconIndex="0"/>-->
+                </File>
+            </Component>
+            <Directory Id="DesktopFolder" />
+            <Directory Id="ProgramMenuFolder">
+                <Directory Id="ProgramMenuDir" Name="Dyspraksiforeningen">
+                    <Component Id="StartMenuShortcuts" Guid="AAD2D94E-B954-47D8-81F4-EC3A83FE750D">
+                        <RemoveFolder Id="ProgramMenuDir" On="uninstall" />
+                        <RegistryValue Root="HKCU" Key="Software\[Manufacturer]\[ProductName]" Type="string" Value="" />
+                    </Component>
+                </Directory>
+            </Directory>
+        </Directory>
+        <Feature Id="DefaultFeature" Title="Main Feature" Level="1">
+            <ComponentRef Id="AA.JPG" />
+            <ComponentRef Id="AARE.JPG" />
+            <ComponentRef Id="AE.JPG" />
+            <ComponentRef Id="AND.JPG" />
+            <ComponentRef Id="AR.JPG" />
+            <ComponentRef Id="B.JPG" />
+            <ComponentRef Id="DROEM.JPG" />
+            <ComponentRef Id="DRYP.JPG" />
+            <ComponentRef Id="E.JPG" />
+            <ComponentRef Id="F.JPG" />
+            <ComponentRef Id="G.JPG" />
+            <ComponentRef Id="H.JPG" />
+            <ComponentRef Id="I.JPG" />
+            <ComponentRef Id="J.JPG" />
+            <ComponentRef Id="K.JPG" />
+            <ComponentRef Id="L.JPG" />
+            <ComponentRef Id="M.JPG" />
+            <ComponentRef Id="N.JPG" />
+            <ComponentRef Id="NG.JPG" />
+            <ComponentRef Id="O.JPG" />
+            <ComponentRef Id="P.JPG" />
+            <ComponentRef Id="R.JPG" />
+            <ComponentRef Id="S.JPG" />
+            <ComponentRef Id="SJ.JPG" />
+            <ComponentRef Id="T.JPG" />
+
+            <ComponentRef Id="U.JPG" />
+            <ComponentRef Id="V.JPG" />
+            <ComponentRef Id="Y.JPG" />
+            <ComponentRef Id="ZAEBLE.JPG" />
+            <ComponentRef Id="ZZOE.JPG" />
+            <ComponentRef Id="ZZOEH.JPG" />
+            <ComponentRef Id="ZZOERN.JPG" />
+            <ComponentRef Id="AA.MP3" />
+            <ComponentRef Id="AARE.MP3" />
+            <ComponentRef Id="AE.MP3" />
+            <ComponentRef Id="AND.MP3" />
+            <ComponentRef Id="AR.MP3" />
+            <ComponentRef Id="B.MP3" />
+            <ComponentRef Id="BLOEDT.MP3" />
+            <ComponentRef Id="DROEM.MP3" />
+            <ComponentRef Id="DRYP.MP3" />
+            <ComponentRef Id="E.MP3" />
+            <ComponentRef Id="EMTY.MP3" />
+            <ComponentRef Id="F.MP3" />
+            <ComponentRef Id="G.MP3" />
+            <ComponentRef Id="H.MP3" />
+            <ComponentRef Id="I.MP3" />
+            <ComponentRef Id="J.MP3" />
+            <ComponentRef Id="K.MP3" />
+            <ComponentRef Id="L.MP3" />
+            <ComponentRef Id="M.MP3" />
+            <ComponentRef Id="N.MP3" />
+            <ComponentRef Id="NG.MP3" />
+            <ComponentRef Id="O.MP3" />
+            <ComponentRef Id="P.MP3" />
+            <ComponentRef Id="R.MP3" />
+            <ComponentRef Id="S.MP3" />
+            <ComponentRef Id="SJ.MP3" />
+            <ComponentRef Id="T.MP3" />
+            <ComponentRef Id="U.MP3" />
+            <ComponentRef Id="V.MP3" />
+            <ComponentRef Id="Y.MP3" />
+            <ComponentRef Id="ZAEBLE.MP3" />
+            <ComponentRef Id="ZZOE.MP3" />
+            <ComponentRef Id="ZZOEH.MP3" />
+            <ComponentRef Id="ZZOERN.MP3" />
+            <ComponentRef Id="LydbyggerenForPC" />
+            <ComponentRef Id="StartMenuShortcuts" />
+        </Feature>
+        <UI />
+        <!--<UIRef Id="WixUI_Minimal" />-->
+        <!--<PropertyRef Id="NETFRAMEWORK35" />-->
+        <!--<Condition Message="This application requires .NET Framework X.Y.">Installed OR NETFRAMEWORK35</Condition>-->
+      <PropertyRef Id="NETFRAMEWORK45"/>
+      <Condition Message='This setup requires Microsoft .NET Framework 4.0 Full or 4.5 package or greater needs to be installed for this installation to continue.'>
+        <![CDATA[Installed OR NETFRAMEWORK40FULL OR NETFRAMEWORK45]]>
+      </Condition>
+        <Icon Id="DesktopIcon.exe" SourceFile="C:\Users\Lars\Documents\Visual Studio 2013\Projects\Lydbygger-1\Lydbygger-1\bin\Release\Lydbyggeren_for_PC.exe" />
+        <Icon Id="StartMenuIcon.exe" SourceFile="C:\Users\Lars\Documents\Visual Studio 2013\Projects\Lydbygger-1\Lydbygger-1\bin\Release\Lydbyggeren_for_PC.exe" />
+    </Product>
+</Wix>

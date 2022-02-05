@@ -1,0 +1,69 @@
+﻿<Window x:Class="Lydbygger_1.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:vm="clr-namespace:Lydbygger_1.ViewModel" 
+        xmlns:ignore="http://www.ignore.com"
+        mc:Ignorable="d ignore"
+        Height="800"
+        Width="960"
+        Title="Lydbyggeren for PC"
+        Icon="DypraksiIcon.ico"
+        WindowStyle="ToolWindow"
+        ResizeMode="NoResize"
+        DataContext="{Binding Main, Source={StaticResource Locator}}">
+    
+    <Window.Resources>
+      
+        <ResourceDictionary>
+            
+                <ResourceDictionary x:Key="1" Source="Skins/MainSkin.xaml" />
+            
+        </ResourceDictionary>
+        
+    </Window.Resources>
+
+    <Grid x:Name="LayoutRoot">
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="1*"></ColumnDefinition>
+            <ColumnDefinition Width="1*"></ColumnDefinition>
+        </Grid.ColumnDefinitions>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="50"/>
+        </Grid.RowDefinitions>
+        <MediaElement Height="0" Margin="10,10,108,0" LoadedBehavior="Manual" Name="mediaElement1" VerticalAlignment="Top" />
+        
+        <StackPanel>
+            <ItemsControl x:Name="SourceImages" ItemsSource="{Binding SourceImages}" >
+                <ItemsControl.ItemsPanel>
+                    <!-- specify the panel that is the container for the items -->
+                    <ItemsPanelTemplate>
+                        <UniformGrid Rows="10" Columns="5" />
+                    </ItemsPanelTemplate>
+                </ItemsControl.ItemsPanel>
+                <!-- specify the template used to render each item -->
+                <ItemsControl.ItemTemplate>
+                    <DataTemplate DataType="{x:Type vm:MySourceImage}">
+                        <Image Tag="{Binding Path=Name, UpdateSourceTrigger=PropertyChanged, Mode=TwoWay}" Source="{Binding Path=Image, UpdateSourceTrigger=PropertyChanged, Mode=TwoWay}" PreviewMouseDown="Image_PreviewMouseDown"   Height="100" Width="100" />
+                                            </DataTemplate>
+                </ItemsControl.ItemTemplate>
+            </ItemsControl>
+            
+            <TextBlock x:Name="Cell00" />
+        </StackPanel>
+
+        <Canvas Grid.Column="1" x:Name="canvas"  AllowDrop="true"   Drop="Canvas_Drop" Background="White" MouseLeftButtonDown="CanvasMouseLeftButtonDown" MouseRightButtonDown="CanvasMouseRightButtonDown" DragLeave="CanvasDragLeave"
+            MouseLeftButtonUp="CanvasMouseLeftButtonUp"
+            MouseMove="CanvasMouseMove" MouseEnter="CanvasMouseMove">
+        </Canvas>
+        <TextBlock Grid.Column="1" Text="* Træk billeder hertil * &#x0a; Højreklik for at slette" HorizontalAlignment="center" VerticalAlignment="Center" FontSize="20" Visibility="{Binding TextVisibility}"></TextBlock>
+
+        <Button Grid.Row="1" Grid.Column="1" HorizontalAlignment="Right" Content=" Print " Command ="{Binding PrintCommand, Mode=OneWay}" CommandParameter="{Binding ElementName=canvas, Mode=OneWay}" Margin="0,0,2,0" Style="{DynamicResource RoundCorner}"></Button>
+        <StackPanel Grid.Row="1" Grid.Column="0" Orientation="Horizontal">
+            <Button Content="Auto Layout" Command ="{Binding AutoLayoutCommand, Mode=OneWay}" CommandParameter="{Binding ElementName=canvas, Mode=OneWay}" Style="{DynamicResource RoundCorner}" ></Button>
+            <Button Content="Ryd alt" Margin="10,0,0,0" Command ="{Binding ClearCommand, Mode=OneWay}" CommandParameter="{Binding ElementName=canvas, Mode=OneWay}" Style="{DynamicResource RoundCorner}"></Button>
+            </StackPanel>
+    </Grid>
+</Window>
