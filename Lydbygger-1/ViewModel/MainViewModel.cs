@@ -32,6 +32,8 @@ namespace Lydbygger_1.ViewModel
     public RelayCommand<FrameworkElement> ClearCommand { get; private set; }
 
     private Visibility _TextVisible;
+
+    private String _Version = "Version: " + System.Reflection.Assembly.GetExecutingAssembly().GetName().Version.ToString();
     
 
     public ObservableCollection<MySourceImage> SourceImages
@@ -53,10 +55,23 @@ namespace Lydbygger_1.ViewModel
       }
     }
 
-    /// <summary>
-    /// The <see cref="WelcomeTitle" /> property's name.
-    /// </summary>
-    public const string WelcomeTitlePropertyName = "WelcomeTitle";
+        public String Version
+        {
+            get
+            {
+                return _Version;
+            }
+            set
+            {
+                _Version = value;
+                RaisePropertyChanged();
+            }
+        }
+
+        /// <summary>
+        /// The <see cref="WelcomeTitle" /> property's name.
+        /// </summary>
+        public const string WelcomeTitlePropertyName = "WelcomeTitle";
 
     private string _welcomeTitle = string.Empty;
 

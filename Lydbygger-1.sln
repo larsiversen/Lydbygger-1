@@ -9,6 +9,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "UnitTests", "UnitTests\Unit
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LydByggerLicenseGenerator", "LydByggerLicenseGenerator\LydByggerLicenseGenerator.csproj", "{8ECAD83E-A3BA-428C-862D-C4777CA606DE}"
 EndProject
+Project("{54435603-DBB4-11D2-8724-00A0C9A8B90C}") = "Setup Lydbyggeren", "Setup Lydbyggeren\Setup Lydbyggeren.vdproj", "{4DD59DE0-3115-4D82-B551-6474EDEEAD14}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -49,6 +51,12 @@ Global
 		{8ECAD83E-A3BA-428C-862D-C4777CA606DE}.Release|Mixed Platforms.ActiveCfg = Release|Any CPU
 		{8ECAD83E-A3BA-428C-862D-C4777CA606DE}.Release|Mixed Platforms.Build.0 = Release|Any CPU
 		{8ECAD83E-A3BA-428C-862D-C4777CA606DE}.Release|x86.ActiveCfg = Release|Any CPU
+		{4DD59DE0-3115-4D82-B551-6474EDEEAD14}.Debug|Any CPU.ActiveCfg = Debug
+		{4DD59DE0-3115-4D82-B551-6474EDEEAD14}.Debug|Mixed Platforms.ActiveCfg = Debug
+		{4DD59DE0-3115-4D82-B551-6474EDEEAD14}.Debug|x86.ActiveCfg = Debug
+		{4DD59DE0-3115-4D82-B551-6474EDEEAD14}.Release|Any CPU.ActiveCfg = Release
+		{4DD59DE0-3115-4D82-B551-6474EDEEAD14}.Release|Mixed Platforms.ActiveCfg = Release
+		{4DD59DE0-3115-4D82-B551-6474EDEEAD14}.Release|x86.ActiveCfg = Release
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

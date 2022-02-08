@@ -58,15 +58,13 @@
             MouseLeftButtonUp="CanvasMouseLeftButtonUp"
             MouseMove="CanvasMouseMove" MouseEnter="CanvasMouseMove">
         </Canvas>
-        <TextBlock Grid.Column="1" Text="* Træk billeder hertil * &#x0a; Højreklik for at slette" HorizontalAlignment="center" VerticalAlignment="Center" FontSize="20" Visibility="{Binding TextVisibility}"></TextBlock>
+        <TextBlock Grid.Column="1" Text="* Træk billeder hertil * &#x0a; Højreklik for at slette &#x0a; Tryk på [Auto Layout] for at lave en hel side" HorizontalAlignment="center" VerticalAlignment="Center" FontSize="20" Visibility="{Binding TextVisibility}"></TextBlock>
 
         <Button Grid.Row="1" Grid.Column="1" HorizontalAlignment="Right" Content=" Print " Command ="{Binding PrintCommand, Mode=OneWay}" CommandParameter="{Binding ElementName=canvas, Mode=OneWay}" Margin="0,0,2,0" Style="{DynamicResource RoundCorner}"></Button>
         <Button Grid.Row="1" Grid.Column="1" Content="Auto Layout" Command ="{Binding AutoLayoutCommand, Mode=OneWay}" CommandParameter="{Binding ElementName=canvas, Mode=OneWay}" Style="{DynamicResource RoundCorner}" Width="200"></Button>
         <StackPanel Grid.Row="1" Grid.Column="0" Orientation="Horizontal">
-            
-            
+            <Label Content="{Binding Version}"></Label>
             <Button Content="Ryd alt" Margin="10,0,0,0" Command ="{Binding ClearCommand, Mode=OneWay}" CommandParameter="{Binding ElementName=canvas, Mode=OneWay}" Style="{DynamicResource RoundCorner}"></Button>
-            
-            </StackPanel>
+        </StackPanel>
     </Grid>
 </Window>
