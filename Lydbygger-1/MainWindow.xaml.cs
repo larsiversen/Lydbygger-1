@@ -24,7 +24,7 @@ namespace Lydbygger_1
             Closing += (s, e) => ViewModelLocator.Cleanup();
             // Diasbled for now:
             // CheckLicense();
-
+          
             Loaded += OnLydbyggerLoaded;
         }
 
@@ -68,7 +68,7 @@ namespace Lydbygger_1
             try
             {
                 _viewModel.TextVisibility = Visibility.Collapsed;
-                if (((Canvas)sender).Children.Count >= 5)
+                if (((Canvas)sender).Children.Count >= 15)
                     return;
 
                 foreach (var format in e.Data.GetFormats())

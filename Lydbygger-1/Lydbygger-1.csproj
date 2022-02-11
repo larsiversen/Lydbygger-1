@@ -258,7 +258,9 @@
   </ItemGroup>
   <ItemGroup>
     <Resource Include="Images\_hustog.jpg" />
-    <Resource Include="Images\_kaalormen.jpg" />
+    <Content Include="Images\_kaalormen.jpg">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
     <Resource Include="Images\_snapper.png" />
     <Resource Include="Images\_terning-drejet.jpg" />
     <Resource Include="Images\_terning-drejet.png" />

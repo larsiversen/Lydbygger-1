@@ -13,15 +13,15 @@
         WindowStyle="ToolWindow"
         ResizeMode="NoResize"
         DataContext="{Binding Main, Source={StaticResource Locator}}">
-    
+
     <Window.Resources>
-      
+
         <ResourceDictionary>
-            
-                <ResourceDictionary x:Key="1" Source="Skins/MainSkin.xaml" />
-            
+
+            <ResourceDictionary x:Key="1" Source="Skins/MainSkin.xaml" />
+
         </ResourceDictionary>
-        
+
     </Window.Resources>
 
     <Grid x:Name="LayoutRoot">
@@ -34,7 +34,7 @@
             <RowDefinition Height="50"/>
         </Grid.RowDefinitions>
         <MediaElement Height="0" Margin="10,10,108,0" LoadedBehavior="Manual" Name="mediaElement1" VerticalAlignment="Top" />
-        
+
         <StackPanel>
             <ItemsControl x:Name="SourceImages" ItemsSource="{Binding SourceImages}" >
                 <ItemsControl.ItemsPanel>
@@ -47,24 +47,26 @@
                 <ItemsControl.ItemTemplate>
                     <DataTemplate DataType="{x:Type vm:MySourceImage}">
                         <Image Tag="{Binding Path=Name, UpdateSourceTrigger=PropertyChanged, Mode=TwoWay}" Source="{Binding Path=Image, UpdateSourceTrigger=PropertyChanged, Mode=TwoWay}" PreviewMouseDown="Image_PreviewMouseDown"   Height="100" Width="100" />
-                                            </DataTemplate>
+                    </DataTemplate>
                 </ItemsControl.ItemTemplate>
             </ItemsControl>
-            
+
             <TextBlock x:Name="Cell00" />
         </StackPanel>
 
-        <Canvas Grid.Column="1" x:Name="canvas"  AllowDrop="true"   Drop="Canvas_Drop" Background="White" MouseLeftButtonDown="CanvasMouseLeftButtonDown" MouseRightButtonDown="CanvasMouseRightButtonDown" DragLeave="CanvasDragLeave"
+        <Canvas Grid.Column="1" x:Name="canvas"  AllowDrop="true"   Drop="Canvas_Drop"  MouseLeftButtonDown="CanvasMouseLeftButtonDown" MouseRightButtonDown="CanvasMouseRightButtonDown" DragLeave="CanvasDragLeave"
             MouseLeftButtonUp="CanvasMouseLeftButtonUp"
-            MouseMove="CanvasMouseMove" MouseEnter="CanvasMouseMove">
+            MouseMove="CanvasMouseMove" MouseEnter="CanvasMouseMove" Background="{Binding CanvasBackground}">
         </Canvas>
         <TextBlock Grid.Column="1" Text="* Træk billeder hertil * &#x0a; Højreklik for at slette &#x0a; Tryk på [Auto Layout] for at lave en hel side" HorizontalAlignment="center" VerticalAlignment="Center" FontSize="20" Visibility="{Binding TextVisibility}"></TextBlock>
 
         <Button Grid.Row="1" Grid.Column="1" HorizontalAlignment="Right" Content=" Print " Command ="{Binding PrintCommand, Mode=OneWay}" CommandParameter="{Binding ElementName=canvas, Mode=OneWay}" Margin="0,0,2,0" Style="{DynamicResource RoundCorner}"></Button>
-        <Button Grid.Row="1" Grid.Column="1" Content="Auto Layout" Command ="{Binding AutoLayoutCommand, Mode=OneWay}" CommandParameter="{Binding ElementName=canvas, Mode=OneWay}" Style="{DynamicResource RoundCorner}" Width="200"></Button>
+        <Button Grid.Row="1" Grid.Column="1" Content="Auto Layout" Command ="{Binding AutoLayoutCommand, Mode=OneWay}" CommandParameter="{Binding ElementName=canvas, Mode=OneWay}" Style="{DynamicResource RoundCorner}" Width="200" Margin="0,0,2,0" Grid.RowSpan="2"/>
         <StackPanel Grid.Row="1" Grid.Column="0" Orientation="Horizontal">
             <Label Content="{Binding Version}"></Label>
             <Button Content="Ryd alt" Margin="10,0,0,0" Command ="{Binding ClearCommand, Mode=OneWay}" CommandParameter="{Binding ElementName=canvas, Mode=OneWay}" Style="{DynamicResource RoundCorner}"></Button>
+            <Label>Baggrund:</Label>
+            <ComboBox Name="BackGroundsCombobox"  ItemsSource="{Binding BackGroundsList}" SelectedItem="{Binding SelectedInstance}" HorizontalAlignment="Right" ></ComboBox>
         </StackPanel>
     </Grid>
 </Window>
