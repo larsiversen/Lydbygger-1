@@ -45,6 +45,7 @@ namespace Lydbygger_1
         private void OnLydbyggerLoaded(object sender, RoutedEventArgs routedEventArgs)
         {
             _viewModel = DataContext as MainViewModel;
+            _viewModel.ClearCanvas(canvas);
         }
 
 

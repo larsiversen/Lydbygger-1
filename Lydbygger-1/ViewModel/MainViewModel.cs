@@ -149,8 +149,6 @@ namespace Lydbygger_1.ViewModel
 
             TextVisibility = Visibility.Visible;
 
-
-
         }
 
         ////public override void Cleanup()
@@ -171,7 +169,6 @@ namespace Lydbygger_1.ViewModel
 
             var canvasChildrenOrg = canvas.Children.Cast<UIElement>().ToArray();
 
-
             var numberOfPics = canvas.Children.Count;
 
             UIElement pictureToWorkOn;
@@ -182,19 +179,24 @@ namespace Lydbygger_1.ViewModel
                 var activePictureNo = 0;
                 foreach (UIElement picture in canvasChildrenOrg)
                 {
-                    pictureToWorkOn = picture;
-                    if (i != 0)
+                    if (picture.GetType() == typeof(Image))
                     {
-                        var xaml = System.Windows.Markup.XamlWriter.Save(picture);
-                        var deepCopy = System.Windows.Markup.XamlReader.Parse(xaml) as UIElement;
-                        canvas.Children.Add(deepCopy);
-                        pictureToWorkOn = canvas.Children[activePictureNo];
+
+                        pictureToWorkOn = picture;
+                        if (i != 0)
+                        {
+                            var xaml = System.Windows.Markup.XamlWriter.Save(picture);
+                            var deepCopy = System.Windows.Markup.XamlReader.Parse(xaml) as UIElement;
+                            canvas.Children.Add(deepCopy);
+
+                            pictureToWorkOn = canvas.Children[activePictureNo];
+                        }
+
+                        Canvas.SetTop(pictureToWorkOn, vertical);
+                        Canvas.SetLeft(pictureToWorkOn, horisontal + k);
+
+                        k += 100;
                     }
-
-                    Canvas.SetTop(pictureToWorkOn, vertical);
-                    Canvas.SetLeft(pictureToWorkOn, horisontal + k);
-
-                    k += 100;
                     activePictureNo++;
                 }
                 vertical += 95;
@@ -202,10 +204,29 @@ namespace Lydbygger_1.ViewModel
         }
 
 
-        private void ClearCanvas(FrameworkElement ele)
+        public void ClearCanvas(FrameworkElement ele)
         {
             ((Canvas)ele).Children.Clear();
             TextVisibility = Visibility.Visible;
+
+            AddVersionAndCopyright(ele);
+        }
+
+        private void AddVersionAndCopyright(FrameworkElement ele)
+        {
+            TextBlock textBlock = new TextBlock();
+
+            textBlock.FontSize = 8;
+            textBlock.Text = "Dyspraksiforeningen 2022, Loiuse Skov, Kristine Lomholt, Ulla Lahti.  Program: Lars Neimann Iversen";
+
+            textBlock.Foreground = new SolidColorBrush(Colors.Black);
+
+            Canvas.SetLeft(textBlock, 10);
+
+            Canvas.SetTop(textBlock, 675);
+
+            ((Canvas)ele).Children.Add(textBlock);
+
 
         }
 

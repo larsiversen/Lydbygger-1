@@ -65,8 +65,8 @@
         <StackPanel Grid.Row="1" Grid.Column="0" Orientation="Horizontal">
             <Label Content="{Binding Version}"></Label>
             <Button Content="Ryd alt" Margin="10,0,0,0" Command ="{Binding ClearCommand, Mode=OneWay}" CommandParameter="{Binding ElementName=canvas, Mode=OneWay}" Style="{DynamicResource RoundCorner}"></Button>
-            <Label>Baggrund:</Label>
-            <ComboBox Name="BackGroundsCombobox"  ItemsSource="{Binding BackGroundsList}" SelectedItem="{Binding SelectedInstance}" HorizontalAlignment="Right" ></ComboBox>
+            <Label Height="25">Baggrund:</Label>
+            <ComboBox Name="BackGroundsCombobox" Height="25" ItemsSource="{Binding BackGroundsList}" SelectedItem="{Binding SelectedInstance}" HorizontalAlignment="Right" ></ComboBox>
         </StackPanel>
     </Grid>
 </Window>
