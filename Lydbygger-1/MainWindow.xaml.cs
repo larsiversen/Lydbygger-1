@@ -4,7 +4,7 @@ using System.Windows.Input;
 using System.Windows.Controls;
 using System.Windows.Media;
 using System;
-
+using System.Windows.Media.Imaging;
 
 namespace Lydbygger_1
 {
@@ -68,13 +68,11 @@ namespace Lydbygger_1
             try
             {
                 _viewModel.TextVisibility = Visibility.Collapsed;
-                if (((Canvas)sender).Children.Count >= 4)
+                if (((Canvas)sender).Children.Count >= 5)
                     return;
 
                 foreach (var format in e.Data.GetFormats())
                 {
-
-
                     ImageSource imageSource = e.Data.GetData(format) as ImageSource;
 
                     if (imageSource != null)
@@ -95,8 +93,36 @@ namespace Lydbygger_1
             }
             catch (Exception)
             {
+                try
+                {
+                    var data = e.Data.GetData(DataFormats.FileDrop);
+                    if (data != null)
+                    {
+                        var fileNames = data as String[];
+                        if (fileNames.Length > 0)
+                        {
+                            Point p = e.GetPosition(sender as IInputElement);
+                            Image myImage3 = new Image();
+                            BitmapImage bi3 = new BitmapImage(new Uri(fileNames[0]));
 
-                // do nothing. Happens if picture from somewhere else is dragged in
+                            myImage3.Stretch = Stretch.Fill;
+                            myImage3.Source = bi3;
+                            myImage3.Height = 200;
+
+
+                            ((Canvas)sender).Children.Add(myImage3);
+                            Canvas.SetTop(myImage3, p.Y);
+                            Canvas.SetLeft(myImage3, p.X);
+
+                        }
+
+                    }
+                }
+                catch (Exception)
+                {
+                    // do nothing. Happens if picture from somewhere else is dragged in
+                }
+
             }
         }
 

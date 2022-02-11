@@ -123,6 +123,8 @@ namespace Lydbygger_1.ViewModel
 
       foreach (string f in imagefiles)
       {
+                if (!System.IO.Path.GetFileNameWithoutExtension(f).StartsWith("000")) continue;
+
         SourceImages.Add(new MySourceImage() { Image = f, Name = System.IO.Path.GetFileNameWithoutExtension(f) });
       }
       PrintCommand = new RelayCommand<FrameworkElement>(PrintPage);
