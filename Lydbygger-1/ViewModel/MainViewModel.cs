@@ -12,7 +12,7 @@ using System.Windows.Markup;
 using System.IO;
 using System.Xml;
 using System.Linq;
-
+using System.Windows.Media.Imaging;
 
 namespace Lydbygger_1.ViewModel
 {
@@ -140,8 +140,6 @@ namespace Lydbygger_1.ViewModel
             BackGroundsList.Add("Kålormen");
             SelectedInstance = BackGroundsList[0];
 
-
-
             PrintCommand = new RelayCommand<FrameworkElement>(PrintPage);
             AutoLayoutCommand = new RelayCommand<FrameworkElement>(AutoLayout);
             ClearCommand = new RelayCommand<FrameworkElement>(ClearCanvas);
@@ -180,22 +178,27 @@ namespace Lydbygger_1.ViewModel
                 foreach (UIElement picture in canvasChildrenOrg)
                 {
                     if (picture.GetType() == typeof(Image))
+
                     {
-
-                        pictureToWorkOn = picture;
-                        if (i != 0)
+                        Image im1 = picture as Image;
+                        if (im1.Width != 20) // then it is the footer logo
                         {
-                            var xaml = System.Windows.Markup.XamlWriter.Save(picture);
-                            var deepCopy = System.Windows.Markup.XamlReader.Parse(xaml) as UIElement;
-                            canvas.Children.Add(deepCopy);
 
-                            pictureToWorkOn = canvas.Children[activePictureNo];
+                            pictureToWorkOn = picture;
+                            if (i != 0)
+                            {
+                                var xaml = System.Windows.Markup.XamlWriter.Save(picture);
+                                var deepCopy = System.Windows.Markup.XamlReader.Parse(xaml) as UIElement;
+                                canvas.Children.Add(deepCopy);
+
+                                pictureToWorkOn = canvas.Children[activePictureNo];
+                            }
+
+                            Canvas.SetTop(pictureToWorkOn, vertical);
+                            Canvas.SetLeft(pictureToWorkOn, horisontal + k);
+
+                            k += 100;
                         }
-
-                        Canvas.SetTop(pictureToWorkOn, vertical);
-                        Canvas.SetLeft(pictureToWorkOn, horisontal + k);
-
-                        k += 100;
                     }
                     activePictureNo++;
                 }
@@ -217,7 +220,7 @@ namespace Lydbygger_1.ViewModel
             TextBlock textBlock = new TextBlock();
 
             textBlock.FontSize = 7;
-            textBlock.Text = "Dyspraksiforeningen 2022, Loiuse Skov, Kristine Lomholt, Ulla Lahti. Illustrationer: Astrid Randrup  Program: Lars Neimann Iversen";
+            textBlock.Text = "Dyspraksiforeningen 2022, Louise Skov, Kristine Lomholt, Ulla Lahti. Illustrationer: Astrid Randrup  Program: Lars Neimann Iversen";
 
             textBlock.Foreground = new SolidColorBrush(Colors.Black);
 
@@ -227,6 +230,18 @@ namespace Lydbygger_1.ViewModel
 
             ((Canvas)ele).Children.Add(textBlock);
 
+            System.Windows.Media.Imaging.BitmapImage bi3 = new BitmapImage(new Uri("pack://application:,,,/Images/00035_dys.jpg"));
+            Image myImage3 = new Image
+            {
+                Source = bi3,
+                Tag = "Logo",
+                Height = 20, 
+                Width = 20  // DO not change this!!!!  Other logic depends on this. Bad design, I know. Will fix later
+            };
+            ((Canvas)ele).Children.Add(myImage3);
+
+            Canvas.SetLeft(myImage3, 430);
+            Canvas.SetTop(myImage3, 675);
 
         }
 
