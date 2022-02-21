@@ -220,7 +220,7 @@ namespace Lydbygger_1.ViewModel
             TextBlock textBlock = new TextBlock();
 
             textBlock.FontSize = 7;
-            textBlock.Text = "Dyspraksiforeningen 2022, Louise Skov, Kristine Lomholt, Ulla Lahti. Illustrationer: Astrid Randrup  Program: Lars Neimann Iversen";
+            textBlock.Text = "Dyspraksiforeningen 2022   -   Louise Skov, Kristine Lomholt, Ulla Lahti. Illustrationer: Astrid Randrup  Program: Lars Neimann Iversen";
 
             textBlock.Foreground = new SolidColorBrush(Colors.Black);
 
